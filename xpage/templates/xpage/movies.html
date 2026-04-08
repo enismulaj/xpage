@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movies in the List</title>
+	{% extends 'xpage/_base.html'%}
+</head>
+<body>
+	{% block content %}
+	<h1>Here we have listed all movies that we have upload last week</h1>
+	{% if movies %}
+	<ul>
+		{% for movie in movies %}
+			<li>{{ movie|title}}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p>No movies in the list</p>
+	{% endif %}
+	{% endblock %}
+</body>
+</html>

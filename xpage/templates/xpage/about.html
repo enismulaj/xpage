@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Xpage | About</title>
+	{% extends 'xpage/_base.html'%}
+</head>
+<body>
+	{% block content %}
+	<h1>About this page</h1>
+	<p>Do you want to meet us, your in the right place 	{{ name }}</p>
+	{% load static %}
+	<img width="200" src="{% static 'xpage/django.png'%}" alt="New movies that well come">
+	{% endblock %}
+</body>
+</html>
